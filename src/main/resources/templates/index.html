@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Конвертація Валюти</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h1 class="mb-4 text-center">Конвертер Валюти</h1>
+        <form action="/convert" method="get">
+            <div class="mb-3">
+                <label for="amount" class="form-label">Сума</label>
+                <input type="number" step="0.01" name="amount" id="amount" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="currency" class="form-label">Оберіть валюту</label>
+                <select name="currency" id="currency" class="form-select">
+                    <option value="USD">Долар США (USD)</option>
+                    <option value="EUR">Євро (EUR)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Конвертувати</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
